@@ -1,0 +1,792 @@
+
+/*
+Theme Name: Fintech-Life
+Theme URI: localhost/wordpress/
+Description: The official theme for Fintech-Life
+Author: Daiki Natsui
+Author URI: localhost/wordpress/
+Version: 1.0.0
+*/
+
+/* 全体適用レイアウト */
+
+body{
+  color: rgb(37, 54, 66);
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1800px;
+  padding: 0px 5px;
+  margin: 0 auto;
+  width: 98%;
+}
+
+/* header部分のレイアウト */
+
+header{
+  height: 80px;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 1000000000000000000;
+  position: sticky;
+}
+
+header i{
+  display: inline-block;
+  padding: 5px 5px;
+}
+
+.header-left{
+  padding-top: 10px;
+  float: left;
+  z-index: 100000000000000000;
+}
+
+.header-right{
+  padding-top: 10px;
+  float: right;
+}
+
+.header-right ul{
+  padding: 0px;
+}
+
+.header-right i{
+  display: inline-block;
+  padding: 5px 5px;
+}
+
+.header-right i:hover{
+  cursor: pointer;
+}
+
+.blog-title h1{
+  margin: 5px;
+  font-size: 40px;
+}
+
+.blog-menu{
+  font-size: 20px;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  list-style: none;
+  font-weight: bold;
+  display: block;
+}
+
+
+ul.sub-menu {
+	display: none;
+	position: absolute;
+  font-weight: normal;
+  min-width: 150px;
+  font-size: 16px;
+}
+ul.sub-menu li a{
+  padding: 5px 10px;
+	display: block;
+  background-color: #F7F7F7;
+  list-style: none;
+}
+
+.sub-menu li{
+  display: block;
+}
+
+ul.sub-menu li a:hover {
+	background-color: rgb(37, 54, 66);
+  color:white;
+}
+
+.blog-menu a{
+  display: block;
+  padding: 10px 0px;
+}
+
+
+.last-menu{
+  margin-right: 0px !important;
+}
+
+.last-menu a{
+  height: 30px;
+  padding:13px 0px 7px 0px;
+}
+
+.menu-icon{
+  float: right;
+  font-size: 25px;
+  padding: 5px;
+  display: none !important;
+}
+
+.hamburger{
+  display: none;
+}
+.cross{
+  display: none;
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+li.hamburger-main-menu{
+  display: none;
+}
+
+a.hamburger-main-menu{
+  display: none;
+}
+
+.hamburger-sub-menues{
+  display: none;
+}
+
+.hamburger-sub-menues a{
+  display: none;
+}
+
+/* top部分レイアウト */
+
+.top-wrapper{
+  color: white;
+  max-width:1800px;
+	height:600px;
+  background-image: url(img/top-wrapper.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.catch-copy{
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 70px 0px;
+}
+
+.top-wrapper h1{
+  margin-top: 0;
+  font-size:80px;
+  letter-spacing:5px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 50px;
+}
+
+.top-wrapper p{
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.category-name{
+  padding-top: 30px;
+  width: 100%;
+}
+
+.category-name h2{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 28px;
+  margin: 0px;
+}
+
+.category-name span{
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 24px;
+}
+
+.category-name span:hover{
+  cursor: pointer;
+}
+
+/* ブログコンテンツ部分レイアウト */
+
+.blog-wrapper{
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+}
+
+.content{
+  float: left;
+  background-color: #F1F3F5;
+  border-radius: 5px;
+}
+
+.content:hover{
+  box-shadow: 3px 3px 5px #777;
+  transition: all 0.1s;
+}
+
+.content img{
+  max-width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.content p{
+  text-align: center;
+}
+
+.content h3{
+  text-align: center;
+}
+
+.blog-pages{
+  height:50px;
+  text-align: center;
+}
+
+.blog-pages ul{
+  padding-left: 0;
+}
+
+.page-number{
+  text-decoration: underline;
+  display: inline-block;
+  list-style: none;
+  padding: 5px 25px;
+  font-size: 18px;
+}
+
+.page-number:hover{
+  font-weight: bold;
+}
+
+
+
+/* フッター部分レイアウト */
+
+footer{
+  color: white;
+  height: 550px;
+  background-color: #1d2b36;
+  border-radius: 5px;
+}
+
+.footer-wrapper{
+  width:  95%;
+  height: 85%;
+  margin: 0 auto;
+}
+
+.slogan{
+  height: 60px;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.slogan h3{
+  margin: 0;
+  font-weight: lighter;
+}
+
+.footer-contents{
+  float: left;
+  width: 20%;
+}
+
+.footer-contents i{
+  font-size: 36px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.footer-contents h4{
+  text-align: center;
+  font-size: 22px;
+}
+
+.sitemap-titles:hover{
+  color: #e33235;
+}
+
+.footer-contents ul{
+  list-style: none;
+  text-align: left;
+  line-height: 30px;
+}
+
+.footer-copy{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.last-footer-contents{
+  display: none;
+}
+
+
+
+.sitemap a:hover{
+  color: #e33235;
+}
+
+
+/* aboutページのスタイル */
+
+.about-wrapper{
+  max-width:1800px;
+	height:230px;
+  background-image: url(img/about-top.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.about-box{
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(37, 54, 66);
+  padding: 50px 0px;
+}
+
+.about-box p{
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.about-fintechlife span{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about-fintechlife span:hover{
+  cursor: pointer;
+}
+
+.about-fintech a{
+  text-decoration: underline;
+}
+
+.writer h1{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+.profile-picture{
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-size: contain;
+  background-image: url(img/profile.png);
+  border-radius: 10px;
+}
+
+.about-contents{
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 40px;
+}
+
+.about-contents p{
+  display: inline-block;
+  text-align: left;
+  margin: 0px;
+}
+
+.my-name h2{
+  font-size: 24px;
+  text-align: center;
+}
+
+/* portfolioのスタイル */
+
+.portfolio-wrapper{
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  background-image: url(img/portfolio.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.portfolio-message{
+  text-align: center;
+  opacity: 0.3;
+  font-size: 100px;
+  padding-top: 200px;
+  margin: 0;
+}
+
+/* メディアクエリ */
+
+@media all and (max-width: 1000px ) {
+  .blog-wrapper{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 2em;
+  }
+  header{
+    height: 60px;
+  }
+
+  .header-right{
+    padding: 0px;
+    height:50px;
+  }
+
+  .blog-title h1{
+    font-size: 30px;
+  }
+
+  ul.sub-menu {
+    min-width: 120px;
+    font-size: 12px;
+  }
+
+  .blog-menu{
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .hamburger-menu{
+    display: none;
+  }
+
+  .hamburger-sub-menues{
+    display: none;
+  }
+
+  .hamburger-sub-menues a{
+    display: none;
+  }
+
+  li.hamburger-main-menu{
+    display: none;
+  }
+
+  a.hamburger-main-menu{
+    display: none;
+  }
+
+  .top-wrapper{
+    height: 400px;
+  }
+
+  .top-wrapper h1{
+    font-size: 60px;
+  }
+
+  .top-wrapper p{
+    font-size: 18px;
+  }
+
+  .catch-copy{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 35px 0px;
+  }
+
+  footer{
+    height: 1200px;
+  }
+
+  .footer-wrapper{
+    width:  90%;
+    height: 85%;
+    margin: 0 auto;
+  }
+
+  .slogan{
+    height: 40px;
+    font-size: 26px;
+  }
+
+  .links{
+    width: 50%;
+    height: 33%;
+  }
+
+  .last-footer-contents{
+    display: block;
+  }
+
+  .footer-contents i{
+    font-size: 40px;
+  }
+
+  .footer-contents h4{
+    font-size: 30px;
+  }
+
+  .footer-contents ul{
+    line-height: 33px;
+  }
+
+  .footer-copy{
+    font-size: 16px;
+    height: 20px;
+  }
+
+  /* about */
+  .about-wrapper{
+  	height:200px;
+    background-image: url(img/about-top.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .about-box{
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(37, 54, 66);
+  }
+
+  .about-box h1{
+    font-size: 20px;
+  }
+
+  .about-box p{
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .writer h1{
+    font-size: 20px;
+    padding-top: 5px;
+  }
+
+
+  .profile-picture{
+    height: 200px;
+    width: 200px;
+  }
+
+  .about-contents{
+    font-size: 16px;
+  }
+
+  .about-box a{
+    font-size: 16px;
+  }
+
+  .my-name h2{
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 670px ) {
+  .blog-wrapper{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr ;
+  }
+  header{
+    height: 60px;
+  }
+
+  .blog-menues{
+    display: none;
+  }
+
+  /* .menu-icon {
+    float: right;
+    font-size: 25px;
+    padding: 5px;
+    margin-top: 16px;
+    display: block !important;
+  } */
+
+  .hamburger{
+    display: block;
+    background:none;
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:45px;
+    padding:10px 15px 0px 15px;
+    color:rgb(37, 54, 66);
+    border:0;
+    font-size:1.6em;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:10000000000000;
+  }
+  .cross{
+    display: block;
+    background:none;
+    position:absolute;
+    top:0;
+    right:0;
+    padding:10px 15px 0px 15px;
+    color:rgb(37, 54, 66);
+    border:0;
+    font-size:3.5em;
+    line-height:60px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:10000000000000;
+  }
+
+  /* .about-contents{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+
+  .about-contents p{
+    display: inline-block;
+    text-align: left;
+    margin: 0px;
+  } */
+
+  .hamburger-menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#fff;  position:absolute; text-align:center; font-size:18px;}
+  .hamburger-menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+  .hamburger-menu li {display: block; color:rgb(37, 54, 66);  padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+  .hamburger-menu li:hover{display: block;  color: #fff;  background:rgb(37, 54, 66); padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+  .hamburger-menu ul li a { text-decoration:none;  margin: 0px; color:rgb(37, 54, 66);}
+  .hamburger-menu ul li a:hover {  color:#fff; text-decoration:none;}
+  .hamburger-menu a{text-decoration:none; color:#fff;}
+  .hamburger-menu a:hover{text-decoration:none; color:#fff;}
+
+  a.hamburger-main-menu{
+    display: block;
+  }
+
+  .hamburger-main-menu i{
+    display: inline-block;
+    padding: 5px 5px;
+  }
+
+  .hamburger-sub-menues{
+    display: block;
+  }
+
+  .hamburger-sub-menues a{
+    display: block;
+  }
+
+
+  .top-wrapper{
+    height: 300px;
+  }
+
+  .top-wrapper h1{
+    font-size: 45px;
+  }
+
+  .top-wrapper p{
+    font-size: 15px;
+  }
+
+  .catch-copy{
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 15px 0px;
+  }
+
+.page-number{
+  padding: 5px 15px;
+}
+
+.slogan{
+  font-size: 18px;
+}
+
+/* about */
+.about-wrapper{
+  height:230px;
+  background-image: url(img/about-top.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.about-box{
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgb(37, 54, 66);
+  padding: 10px 0px;
+}
+
+.about-box h1{
+  font-size: 20px;
+}
+
+.about-box p{
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.writer h1{
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+
+.profile-picture{
+  height: 200px;
+  width: 200px;
+}
+
+.about-contents{
+  font-size: 0.8em;
+}
+
+.my-name h2{
+  text-align: center;
+  font-size: 18px;
+}
+
+/* portfolioのスタイル */
+
+.portfolio-wrapper{
+  width: 100%;
+  height: 400px;
+
+}
+
+.portfolio-message{
+  text-align: center;
+  opacity: 0.3;
+  font-size: 75px;
+  padding-top: 120px;
+}
+
+
+}
